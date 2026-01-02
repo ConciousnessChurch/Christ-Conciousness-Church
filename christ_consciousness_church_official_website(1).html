@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christ Consciousness Church</title>
+  <meta name="description" content="Christ Consciousness Church — A place of worship affirming that the Kingdom of Heaven is within all men and women." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f8f7f4;
+      color: #2b2b2b;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #2c3e50, #4b6b88);
+      color: #ffffff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #1f2f3f;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    section {
+      max-width: 950px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    h2 { color: #2c3e50; border-bottom: 2px solid #d0d0d0; padding-bottom: 0.4rem; }
+    .card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-top: 1.2rem;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.4rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .calendar div {
+      padding: 0.5rem;
+      border-radius: 4px;
+      background: #f0f0f0;
+      font-size: 0.85rem;
+    }
+    .service-day {
+      background: #4b6b88 !important;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    footer {
+      background: #1f2f3f;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Christ Consciousness Church</h1>
+  <p>“The Kingdom of Heaven is within all men and women.”</p>
+  <p>77 Brinkerhoff Street • Plattsburgh, New York</p>
+</header>
+
+<nav>
+  <a href="#beliefs">Beliefs</a>
+  <a href="#practices">Practices</a>
+  <a href="#services">Services</a>
+  <a href="#calendar">Service Calendar</a>
+  <a href="#governance">Trust & Governance</a>
+  <a href="#sanctuary">Private Sanctuary</a>
+  <a href="#documents">Documents</a>
+</nav>
+
+<section id="beliefs">
+  <h2>Statement of Belief</h2>
+  <div class="card">
+    <p>Christ Consciousness Church affirms the sincere religious belief that the Kingdom of Heaven is within all men and women. Each person carries an inner divine spark and is capable of direct communion with the Most High Source of All Creation.</p>
+  </div>
+</section>
+
+<section id="practices">
+  <h2>Religious Practices</h2>
+  <div class="card">
+    <ul>
+      <li>Prayer, meditation, and contemplation</li>
+      <li>Ethical living through love, forgiveness, and compassion</li>
+      <li>Teaching inspired by the life and example of Jesus Christ</li>
+      <li>Remote worship through meditation and spiritual focus</li>
+    </ul>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Worship Services</h2>
+  <div class="card">
+    <p><strong>Service Schedule:</strong> One worship service per month, held on the <strong>3rd day of every month</strong>.</p>
+    <p><strong>Duration:</strong> Approximately three (3) hours.</p>
+    <p>Services may be attended in person or remotely through prayer, meditation, and spiritual practice.</p>
+  </div>
+</section>
+
+<section id="calendar">
+  <h2>Service Calendar</h2>
+  <div class="card">
+    <p>The highlighted date marks the monthly worship service (3rd of the month).</p>
+    <div id="calendar" class="calendar"></div>
+  </div>
+</section>
+
+<section id="governance">
+  <h2>Trust & Governance</h2>
+  <div class="card">
+    <p>Christ Consciousness Church is held and administered through a religious trust organized exclusively for religious purposes. The Trust ensures that all property and activities are devoted primarily and dominantly to worship, religious instruction, and sanctuary.</p>
+    <p>This Church operates on a not-for-profit basis. No part of its assets or income inures to private benefit. Governance decisions are made by the Trustees in accordance with fiduciary duty, conscience, and applicable law.</p>
+    <p>This page is provided for transparency to the public and to municipal assessors reviewing religious use.</p>
+  </div>
+</section>
+
+<section id="sanctuary">
+  <h2>Private Sanctuary</h2>
+  <div class="card">
+    <p>The Church maintains a private religious sanctuary for prayer, meditation, and spiritual retreat. Access is governed by Church doctrine and religious discipline.</p>
+    <p>Use of the sanctuary supports religious contemplation, instruction, and spiritual communion, consistent with sincerely held religious beliefs.</p>
+  </div>
+</section>
+
+<section id="documents">
+  <h2>Church Documents</h2>
+  <div class="card">
+    <ul>
+      <li><a href="trust.pdf">Irrevocable Religious Trust</a></li>
+      <li><a href="beliefs.pdf">Statement of Beliefs</a></li>
+      <li><a href="practices.pdf">Statement of Practices</a></li>
+    </ul>
+    <p>These documents are provided for reference and transparency.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Christ Consciousness Church. All rights reserved.</p>
+  <p>Website content copyright held by Steven Bodrogi Bouchard.</p>
+</footer>
+
+<script>
+  const yearSpan = document.getElementById('year');
+  yearSpan.textContent = new Date().getFullYear();
+
+  const calendarEl = document.getElementById('calendar');
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  for (let i = 0; i < firstDay; i++) {
+    calendarEl.appendChild(document.createElement('div'));
+  }
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const cell = document.createElement('div');
+    cell.textContent = day;
+    if (day === 3) cell.classList.add('service-day');
+    calendarEl.appendChild(cell);
+  }
+</script>
+
+</body>
+</html>
